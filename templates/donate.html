@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Donate to Our Cause</h2>
+<form id="donateForm" method="POST">
+  <div class="mb-3">
+    <label for="name" class="form-label">Your Name</label>
+    <input type="text" class="form-control" id="name" name="name" required />
+  </div>
+  <div class="mb-3">
+    <label for="amount" class="form-label">Donation Amount</label>
+    <input
+      type="number"
+      class="form-control"
+      id="amount"
+      name="amount"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-success">Donate</button>
+</form>
+
+<script>
+  // Add an event listener to intercept form submission
+  const form = document.getElementById("donateForm");
+  form.addEventListener("submit", function (event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Get the form values
+    const name = document.getElementById("name").value;
+    const amount = document.getElementById("amount").value;
+
+    // Show the thank you message
+    alert(`Thank you, ${name}, for donating ₹${amount} to us!`);
+
+    // Optionally, you can proceed to submit the form after showing the alert
+    form.submit();
+  });
+</script>
+{% endblock %}

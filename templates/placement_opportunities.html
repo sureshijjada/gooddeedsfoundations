@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center mb-4">Placement Opportunities</h2>
+<div class="row">
+  {% for opportunity in opportunities %}
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm">
+      <img src="{{ opportunity.image }}" class="card-img-top img" alt="{{ opportunity.title }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ opportunity.title }}</h5>
+        <p class="card-text">{{ opportunity.description }}</p>
+        <p><strong>Placements per year:</strong> {{ opportunity.placements_per_year }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

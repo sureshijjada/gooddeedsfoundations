@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  color: #007367;
+}
+
+.card-title {
+  color: #007367;
+}
+
+.btn-primary {
+  background-color: #007367;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005a50;
+}
+
+.img {
+  height: 300px;
+  width: 100%;
+}
+
+footer {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 20px 0;
+}
+.home_img{
+  height: 300px;
+  width: 300px;
+}
+.subtext{
+  display: inline;
+}
